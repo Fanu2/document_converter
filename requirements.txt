@@ -1,3 +1,5 @@
 gradio
 pypandoc
 pdf2docx
+streamlit
+
