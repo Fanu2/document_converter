@@ -1,6 +1,13 @@
 import gradio as gr
 from converter import convert_document
+
 import pypandoc
+
+# Ensure Pandoc is available in Streamlit Cloud
+try:
+    pypandoc.get_pandoc_path()
+except OSError:
+    pypandoc.download_pandoc()
 
 # Supported formats
 input_formats = sorted(pypandoc.get_pandoc_formats()[0])
